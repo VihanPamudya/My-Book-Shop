@@ -1,10 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+interface Book{
+  name: string;
+  author: string;
+  src: string;
+  amount: number;
+}
 
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
-export class BooksComponent {
+
+export class BooksComponent implements OnInit {
+ 
+  ngOnInit(): void {
+  }
+
+  books: Book[] = [
+    {
+      name : 'Clean Code',
+      author : 'Robert C Martin',
+      src : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXiCLaXo-haziow4z37tTCzYgsOZ2Bc2kJfRoedHtDO5l93LMo',
+      amount: 700
+    
+    },{
+      name : 'Clean Code',
+      author : 'Robert C Martin',
+      src : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXiCLaXo-haziow4z37tTCzYgsOZ2Bc2kJfRoedHtDO5l93LMo',
+      amount: 800
+    }
+  ]
+
+  isShowing: boolean = false;
+
+  show(){
+    this.isShowing = !this.isShowing;
+  }
 
 }

@@ -1,1 +1,12 @@
-<p>books works!</p>
+<h2>Programming Books List!</h2>
+
+<ul>
+    <ng-container *ngFor="let book of books">
+        <li class="book">
+            <img src="{{book.src}}" alt="{{book.name}}" width="100">
+            <p class="title"> {{book.name | titlecase}} by {{book.author | titlecase}}</p>
+            <p class="currency">{{book.amount | currency}}</p>
+            <button>Add to Card</button>
+        </li>
+    </ng-container>
+</ul>
