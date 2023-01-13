@@ -1,0 +1,8 @@
+<li>
+  <img src="{{ book.src }}" alt="{{ book.name }}" width="100" autofocus />
+  <p class="title">
+    {{ book.name | titlecase }} by {{ book.author | titlecase }}
+  </p>
+  <p class="currency">{{ book.amount | currency }}</p>
+  <button (click)="addToCart()">Add to Card</button>
+</li>
