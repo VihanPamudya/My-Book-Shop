@@ -9,17 +9,8 @@ import { BooksModule } from './books/books.module';
 import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CartComponent
-  ],
-  imports: [
-    BrowserModule,
-    BooksModule,
-    AppRoutingModule,
-    AuthModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, CartComponent],
+  imports: [BrowserModule, BooksModule, AppRoutingModule, AuthModule],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

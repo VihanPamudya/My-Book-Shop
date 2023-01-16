@@ -10,9 +10,10 @@ import { Book } from '../../interface/Book';
 export class BookComponent implements OnInit {
   @Input() book: Book = {} as Book;
   isInCart: boolean = false;
-  ngOnInit(): void {}
 
   constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {}
 
   addToCart() {
     this.isInCart = true;
