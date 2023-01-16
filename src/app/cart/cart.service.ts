@@ -10,7 +10,15 @@ export class CartService {
 
   constructor() { }
 
-  add(book:Book){
+  add(book: Book) {
     this.cart.push(book);
+  }
+
+  get() {
+    return this.cart;
+  }
+
+  remove(book: Book) {
+    this.cart = this.cart.filter((b) => b != book)
   }
 }

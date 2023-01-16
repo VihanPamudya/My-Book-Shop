@@ -5,19 +5,22 @@ import { Book } from '../../interface/Book';
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css']
+  styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
+  @Input() book: Book = {} as Book;
+  isInCart: boolean = false;
+  ngOnInit(): void {}
 
-  @Input() book: Book = {} as Book
-  ngOnInit(): void {
-
-  }
-
-  constructor(private cartService: CartService){}
+  constructor(private cartService: CartService) {}
 
   addToCart() {
-    this.cartService.add(this.book)
+    this.isInCart = true;
+    this.cartService.add(this.book);
   }
 
+  removeFromCart() {
+    this.isInCart = false;
+    this.cartService.remove(this.book);
+  }
 }
