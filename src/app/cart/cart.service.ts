@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { Book } from '../interface/Book';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-
   cart: Array<Book> = [];
 
-  constructor() { }
+  constructor() {}
 
   add(book: Book) {
     this.cart.push(book);
@@ -19,6 +18,6 @@ export class CartService {
   }
 
   remove(book: Book) {
-    this.cart = this.cart.filter((b) => b != book)
+    this.cart = this.cart.filter((b) => b != book);
   }
 }

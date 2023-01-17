@@ -68,6 +68,7 @@ export class AuthService {
         this.isAuthenticated = false;
       })
       .catch((error) => {
+        // An error happened.
       });
   }
 }

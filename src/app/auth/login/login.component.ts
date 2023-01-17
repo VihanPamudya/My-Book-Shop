@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginForm } from 'src/app/interface/Auth';
 import { AuthService } from '../auth.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
